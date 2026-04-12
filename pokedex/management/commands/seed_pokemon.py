@@ -43,15 +43,15 @@ class Command(BaseCommand):
 
                 if created:
                     creados += 1
-                    self.stdout.write(self.style.SUCCESS(f"✓ {pokemon.name} creado"))
+                    self.stdout.write(self.style.SUCCESS(f"[OK] {pokemon.name} creado"))
                 else:
                     actualizados += 1
                     self.stdout.write(
-                        self.style.WARNING(f"↺ {pokemon.name} ya existía")
+                        self.style.WARNING(f"[--] {pokemon.name} ya existia")
                     )
             except Exception as e:
                 self.stdout.write(
-                    self.style.ERROR(f"✗ Error al cargar ID {pokemon_id}: {e}")
+                    self.style.ERROR(f"[ERROR] ID {pokemon_id}: {e}")
                 )
 
         self.stdout.write(
