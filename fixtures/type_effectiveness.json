@@ -1,0 +1,3044 @@
+[
+  {
+    "model": "pokedex.pokemontype",
+    "pk": 1,
+    "fields": {
+      "name": "normal"
+    }
+  },
+  {
+    "model": "pokedex.pokemontype",
+    "pk": 2,
+    "fields": {
+      "name": "fire"
+    }
+  },
+  {
+    "model": "pokedex.pokemontype",
+    "pk": 3,
+    "fields": {
+      "name": "water"
+    }
+  },
+  {
+    "model": "pokedex.pokemontype",
+    "pk": 4,
+    "fields": {
+      "name": "electric"
+    }
+  },
+  {
+    "model": "pokedex.pokemontype",
+    "pk": 5,
+    "fields": {
+      "name": "grass"
+    }
+  },
+  {
+    "model": "pokedex.pokemontype",
+    "pk": 6,
+    "fields": {
+      "name": "ice"
+    }
+  },
+  {
+    "model": "pokedex.pokemontype",
+    "pk": 7,
+    "fields": {
+      "name": "fighting"
+    }
+  },
+  {
+    "model": "pokedex.pokemontype",
+    "pk": 8,
+    "fields": {
+      "name": "poison"
+    }
+  },
+  {
+    "model": "pokedex.pokemontype",
+    "pk": 9,
+    "fields": {
+      "name": "ground"
+    }
+  },
+  {
+    "model": "pokedex.pokemontype",
+    "pk": 10,
+    "fields": {
+      "name": "flying"
+    }
+  },
+  {
+    "model": "pokedex.pokemontype",
+    "pk": 11,
+    "fields": {
+      "name": "psychic"
+    }
+  },
+  {
+    "model": "pokedex.pokemontype",
+    "pk": 12,
+    "fields": {
+      "name": "bug"
+    }
+  },
+  {
+    "model": "pokedex.pokemontype",
+    "pk": 13,
+    "fields": {
+      "name": "rock"
+    }
+  },
+  {
+    "model": "pokedex.pokemontype",
+    "pk": 14,
+    "fields": {
+      "name": "ghost"
+    }
+  },
+  {
+    "model": "pokedex.pokemontype",
+    "pk": 15,
+    "fields": {
+      "name": "dragon"
+    }
+  },
+  {
+    "model": "pokedex.pokemontype",
+    "pk": 16,
+    "fields": {
+      "name": "dark"
+    }
+  },
+  {
+    "model": "pokedex.pokemontype",
+    "pk": 17,
+    "fields": {
+      "name": "steel"
+    }
+  },
+  {
+    "model": "pokedex.pokemontype",
+    "pk": 18,
+    "fields": {
+      "name": "fairy"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 1,
+    "fields": {
+      "attacking_type": 1,
+      "defending_type": 1,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 2,
+    "fields": {
+      "attacking_type": 1,
+      "defending_type": 2,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 3,
+    "fields": {
+      "attacking_type": 1,
+      "defending_type": 3,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 4,
+    "fields": {
+      "attacking_type": 1,
+      "defending_type": 4,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 5,
+    "fields": {
+      "attacking_type": 1,
+      "defending_type": 5,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 6,
+    "fields": {
+      "attacking_type": 1,
+      "defending_type": 6,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 7,
+    "fields": {
+      "attacking_type": 1,
+      "defending_type": 7,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 8,
+    "fields": {
+      "attacking_type": 1,
+      "defending_type": 8,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 9,
+    "fields": {
+      "attacking_type": 1,
+      "defending_type": 9,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 10,
+    "fields": {
+      "attacking_type": 1,
+      "defending_type": 10,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 11,
+    "fields": {
+      "attacking_type": 1,
+      "defending_type": 11,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 12,
+    "fields": {
+      "attacking_type": 1,
+      "defending_type": 12,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 13,
+    "fields": {
+      "attacking_type": 1,
+      "defending_type": 13,
+      "multiplier": "0.5"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 14,
+    "fields": {
+      "attacking_type": 1,
+      "defending_type": 14,
+      "multiplier": "0.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 15,
+    "fields": {
+      "attacking_type": 1,
+      "defending_type": 15,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 16,
+    "fields": {
+      "attacking_type": 1,
+      "defending_type": 16,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 17,
+    "fields": {
+      "attacking_type": 1,
+      "defending_type": 17,
+      "multiplier": "0.5"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 18,
+    "fields": {
+      "attacking_type": 1,
+      "defending_type": 18,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 19,
+    "fields": {
+      "attacking_type": 2,
+      "defending_type": 1,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 20,
+    "fields": {
+      "attacking_type": 2,
+      "defending_type": 2,
+      "multiplier": "0.5"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 21,
+    "fields": {
+      "attacking_type": 2,
+      "defending_type": 3,
+      "multiplier": "0.5"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 22,
+    "fields": {
+      "attacking_type": 2,
+      "defending_type": 4,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 23,
+    "fields": {
+      "attacking_type": 2,
+      "defending_type": 5,
+      "multiplier": "2.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 24,
+    "fields": {
+      "attacking_type": 2,
+      "defending_type": 6,
+      "multiplier": "2.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 25,
+    "fields": {
+      "attacking_type": 2,
+      "defending_type": 7,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 26,
+    "fields": {
+      "attacking_type": 2,
+      "defending_type": 8,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 27,
+    "fields": {
+      "attacking_type": 2,
+      "defending_type": 9,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 28,
+    "fields": {
+      "attacking_type": 2,
+      "defending_type": 10,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 29,
+    "fields": {
+      "attacking_type": 2,
+      "defending_type": 11,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 30,
+    "fields": {
+      "attacking_type": 2,
+      "defending_type": 12,
+      "multiplier": "2.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 31,
+    "fields": {
+      "attacking_type": 2,
+      "defending_type": 13,
+      "multiplier": "0.5"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 32,
+    "fields": {
+      "attacking_type": 2,
+      "defending_type": 14,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 33,
+    "fields": {
+      "attacking_type": 2,
+      "defending_type": 15,
+      "multiplier": "0.5"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 34,
+    "fields": {
+      "attacking_type": 2,
+      "defending_type": 16,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 35,
+    "fields": {
+      "attacking_type": 2,
+      "defending_type": 17,
+      "multiplier": "2.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 36,
+    "fields": {
+      "attacking_type": 2,
+      "defending_type": 18,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 37,
+    "fields": {
+      "attacking_type": 3,
+      "defending_type": 1,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 38,
+    "fields": {
+      "attacking_type": 3,
+      "defending_type": 2,
+      "multiplier": "2.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 39,
+    "fields": {
+      "attacking_type": 3,
+      "defending_type": 3,
+      "multiplier": "0.5"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 40,
+    "fields": {
+      "attacking_type": 3,
+      "defending_type": 4,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 41,
+    "fields": {
+      "attacking_type": 3,
+      "defending_type": 5,
+      "multiplier": "0.5"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 42,
+    "fields": {
+      "attacking_type": 3,
+      "defending_type": 6,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 43,
+    "fields": {
+      "attacking_type": 3,
+      "defending_type": 7,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 44,
+    "fields": {
+      "attacking_type": 3,
+      "defending_type": 8,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 45,
+    "fields": {
+      "attacking_type": 3,
+      "defending_type": 9,
+      "multiplier": "2.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 46,
+    "fields": {
+      "attacking_type": 3,
+      "defending_type": 10,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 47,
+    "fields": {
+      "attacking_type": 3,
+      "defending_type": 11,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 48,
+    "fields": {
+      "attacking_type": 3,
+      "defending_type": 12,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 49,
+    "fields": {
+      "attacking_type": 3,
+      "defending_type": 13,
+      "multiplier": "2.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 50,
+    "fields": {
+      "attacking_type": 3,
+      "defending_type": 14,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 51,
+    "fields": {
+      "attacking_type": 3,
+      "defending_type": 15,
+      "multiplier": "0.5"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 52,
+    "fields": {
+      "attacking_type": 3,
+      "defending_type": 16,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 53,
+    "fields": {
+      "attacking_type": 3,
+      "defending_type": 17,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 54,
+    "fields": {
+      "attacking_type": 3,
+      "defending_type": 18,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 55,
+    "fields": {
+      "attacking_type": 4,
+      "defending_type": 1,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 56,
+    "fields": {
+      "attacking_type": 4,
+      "defending_type": 2,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 57,
+    "fields": {
+      "attacking_type": 4,
+      "defending_type": 3,
+      "multiplier": "2.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 58,
+    "fields": {
+      "attacking_type": 4,
+      "defending_type": 4,
+      "multiplier": "0.5"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 59,
+    "fields": {
+      "attacking_type": 4,
+      "defending_type": 5,
+      "multiplier": "0.5"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 60,
+    "fields": {
+      "attacking_type": 4,
+      "defending_type": 6,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 61,
+    "fields": {
+      "attacking_type": 4,
+      "defending_type": 7,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 62,
+    "fields": {
+      "attacking_type": 4,
+      "defending_type": 8,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 63,
+    "fields": {
+      "attacking_type": 4,
+      "defending_type": 9,
+      "multiplier": "0.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 64,
+    "fields": {
+      "attacking_type": 4,
+      "defending_type": 10,
+      "multiplier": "2.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 65,
+    "fields": {
+      "attacking_type": 4,
+      "defending_type": 11,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 66,
+    "fields": {
+      "attacking_type": 4,
+      "defending_type": 12,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 67,
+    "fields": {
+      "attacking_type": 4,
+      "defending_type": 13,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 68,
+    "fields": {
+      "attacking_type": 4,
+      "defending_type": 14,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 69,
+    "fields": {
+      "attacking_type": 4,
+      "defending_type": 15,
+      "multiplier": "0.5"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 70,
+    "fields": {
+      "attacking_type": 4,
+      "defending_type": 16,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 71,
+    "fields": {
+      "attacking_type": 4,
+      "defending_type": 17,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 72,
+    "fields": {
+      "attacking_type": 4,
+      "defending_type": 18,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 73,
+    "fields": {
+      "attacking_type": 5,
+      "defending_type": 1,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 74,
+    "fields": {
+      "attacking_type": 5,
+      "defending_type": 2,
+      "multiplier": "0.5"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 75,
+    "fields": {
+      "attacking_type": 5,
+      "defending_type": 3,
+      "multiplier": "2.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 76,
+    "fields": {
+      "attacking_type": 5,
+      "defending_type": 4,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 77,
+    "fields": {
+      "attacking_type": 5,
+      "defending_type": 5,
+      "multiplier": "0.5"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 78,
+    "fields": {
+      "attacking_type": 5,
+      "defending_type": 6,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 79,
+    "fields": {
+      "attacking_type": 5,
+      "defending_type": 7,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 80,
+    "fields": {
+      "attacking_type": 5,
+      "defending_type": 8,
+      "multiplier": "0.5"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 81,
+    "fields": {
+      "attacking_type": 5,
+      "defending_type": 9,
+      "multiplier": "2.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 82,
+    "fields": {
+      "attacking_type": 5,
+      "defending_type": 10,
+      "multiplier": "0.5"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 83,
+    "fields": {
+      "attacking_type": 5,
+      "defending_type": 11,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 84,
+    "fields": {
+      "attacking_type": 5,
+      "defending_type": 12,
+      "multiplier": "0.5"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 85,
+    "fields": {
+      "attacking_type": 5,
+      "defending_type": 13,
+      "multiplier": "2.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 86,
+    "fields": {
+      "attacking_type": 5,
+      "defending_type": 14,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 87,
+    "fields": {
+      "attacking_type": 5,
+      "defending_type": 15,
+      "multiplier": "0.5"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 88,
+    "fields": {
+      "attacking_type": 5,
+      "defending_type": 16,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 89,
+    "fields": {
+      "attacking_type": 5,
+      "defending_type": 17,
+      "multiplier": "0.5"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 90,
+    "fields": {
+      "attacking_type": 5,
+      "defending_type": 18,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 91,
+    "fields": {
+      "attacking_type": 6,
+      "defending_type": 1,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 92,
+    "fields": {
+      "attacking_type": 6,
+      "defending_type": 2,
+      "multiplier": "0.5"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 93,
+    "fields": {
+      "attacking_type": 6,
+      "defending_type": 3,
+      "multiplier": "0.5"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 94,
+    "fields": {
+      "attacking_type": 6,
+      "defending_type": 4,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 95,
+    "fields": {
+      "attacking_type": 6,
+      "defending_type": 5,
+      "multiplier": "2.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 96,
+    "fields": {
+      "attacking_type": 6,
+      "defending_type": 6,
+      "multiplier": "0.5"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 97,
+    "fields": {
+      "attacking_type": 6,
+      "defending_type": 7,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 98,
+    "fields": {
+      "attacking_type": 6,
+      "defending_type": 8,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 99,
+    "fields": {
+      "attacking_type": 6,
+      "defending_type": 9,
+      "multiplier": "2.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 100,
+    "fields": {
+      "attacking_type": 6,
+      "defending_type": 10,
+      "multiplier": "2.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 101,
+    "fields": {
+      "attacking_type": 6,
+      "defending_type": 11,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 102,
+    "fields": {
+      "attacking_type": 6,
+      "defending_type": 12,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 103,
+    "fields": {
+      "attacking_type": 6,
+      "defending_type": 13,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 104,
+    "fields": {
+      "attacking_type": 6,
+      "defending_type": 14,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 105,
+    "fields": {
+      "attacking_type": 6,
+      "defending_type": 15,
+      "multiplier": "2.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 106,
+    "fields": {
+      "attacking_type": 6,
+      "defending_type": 16,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 107,
+    "fields": {
+      "attacking_type": 6,
+      "defending_type": 17,
+      "multiplier": "0.5"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 108,
+    "fields": {
+      "attacking_type": 6,
+      "defending_type": 18,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 109,
+    "fields": {
+      "attacking_type": 7,
+      "defending_type": 1,
+      "multiplier": "2.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 110,
+    "fields": {
+      "attacking_type": 7,
+      "defending_type": 2,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 111,
+    "fields": {
+      "attacking_type": 7,
+      "defending_type": 3,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 112,
+    "fields": {
+      "attacking_type": 7,
+      "defending_type": 4,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 113,
+    "fields": {
+      "attacking_type": 7,
+      "defending_type": 5,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 114,
+    "fields": {
+      "attacking_type": 7,
+      "defending_type": 6,
+      "multiplier": "2.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 115,
+    "fields": {
+      "attacking_type": 7,
+      "defending_type": 7,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 116,
+    "fields": {
+      "attacking_type": 7,
+      "defending_type": 8,
+      "multiplier": "0.5"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 117,
+    "fields": {
+      "attacking_type": 7,
+      "defending_type": 9,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 118,
+    "fields": {
+      "attacking_type": 7,
+      "defending_type": 10,
+      "multiplier": "0.5"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 119,
+    "fields": {
+      "attacking_type": 7,
+      "defending_type": 11,
+      "multiplier": "0.5"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 120,
+    "fields": {
+      "attacking_type": 7,
+      "defending_type": 12,
+      "multiplier": "0.5"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 121,
+    "fields": {
+      "attacking_type": 7,
+      "defending_type": 13,
+      "multiplier": "2.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 122,
+    "fields": {
+      "attacking_type": 7,
+      "defending_type": 14,
+      "multiplier": "0.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 123,
+    "fields": {
+      "attacking_type": 7,
+      "defending_type": 15,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 124,
+    "fields": {
+      "attacking_type": 7,
+      "defending_type": 16,
+      "multiplier": "2.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 125,
+    "fields": {
+      "attacking_type": 7,
+      "defending_type": 17,
+      "multiplier": "2.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 126,
+    "fields": {
+      "attacking_type": 7,
+      "defending_type": 18,
+      "multiplier": "0.5"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 127,
+    "fields": {
+      "attacking_type": 8,
+      "defending_type": 1,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 128,
+    "fields": {
+      "attacking_type": 8,
+      "defending_type": 2,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 129,
+    "fields": {
+      "attacking_type": 8,
+      "defending_type": 3,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 130,
+    "fields": {
+      "attacking_type": 8,
+      "defending_type": 4,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 131,
+    "fields": {
+      "attacking_type": 8,
+      "defending_type": 5,
+      "multiplier": "2.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 132,
+    "fields": {
+      "attacking_type": 8,
+      "defending_type": 6,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 133,
+    "fields": {
+      "attacking_type": 8,
+      "defending_type": 7,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 134,
+    "fields": {
+      "attacking_type": 8,
+      "defending_type": 8,
+      "multiplier": "0.5"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 135,
+    "fields": {
+      "attacking_type": 8,
+      "defending_type": 9,
+      "multiplier": "0.5"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 136,
+    "fields": {
+      "attacking_type": 8,
+      "defending_type": 10,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 137,
+    "fields": {
+      "attacking_type": 8,
+      "defending_type": 11,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 138,
+    "fields": {
+      "attacking_type": 8,
+      "defending_type": 12,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 139,
+    "fields": {
+      "attacking_type": 8,
+      "defending_type": 13,
+      "multiplier": "0.5"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 140,
+    "fields": {
+      "attacking_type": 8,
+      "defending_type": 14,
+      "multiplier": "0.5"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 141,
+    "fields": {
+      "attacking_type": 8,
+      "defending_type": 15,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 142,
+    "fields": {
+      "attacking_type": 8,
+      "defending_type": 16,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 143,
+    "fields": {
+      "attacking_type": 8,
+      "defending_type": 17,
+      "multiplier": "0.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 144,
+    "fields": {
+      "attacking_type": 8,
+      "defending_type": 18,
+      "multiplier": "2.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 145,
+    "fields": {
+      "attacking_type": 9,
+      "defending_type": 1,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 146,
+    "fields": {
+      "attacking_type": 9,
+      "defending_type": 2,
+      "multiplier": "2.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 147,
+    "fields": {
+      "attacking_type": 9,
+      "defending_type": 3,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 148,
+    "fields": {
+      "attacking_type": 9,
+      "defending_type": 4,
+      "multiplier": "2.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 149,
+    "fields": {
+      "attacking_type": 9,
+      "defending_type": 5,
+      "multiplier": "0.5"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 150,
+    "fields": {
+      "attacking_type": 9,
+      "defending_type": 6,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 151,
+    "fields": {
+      "attacking_type": 9,
+      "defending_type": 7,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 152,
+    "fields": {
+      "attacking_type": 9,
+      "defending_type": 8,
+      "multiplier": "2.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 153,
+    "fields": {
+      "attacking_type": 9,
+      "defending_type": 9,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 154,
+    "fields": {
+      "attacking_type": 9,
+      "defending_type": 10,
+      "multiplier": "0.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 155,
+    "fields": {
+      "attacking_type": 9,
+      "defending_type": 11,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 156,
+    "fields": {
+      "attacking_type": 9,
+      "defending_type": 12,
+      "multiplier": "0.5"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 157,
+    "fields": {
+      "attacking_type": 9,
+      "defending_type": 13,
+      "multiplier": "2.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 158,
+    "fields": {
+      "attacking_type": 9,
+      "defending_type": 14,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 159,
+    "fields": {
+      "attacking_type": 9,
+      "defending_type": 15,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 160,
+    "fields": {
+      "attacking_type": 9,
+      "defending_type": 16,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 161,
+    "fields": {
+      "attacking_type": 9,
+      "defending_type": 17,
+      "multiplier": "2.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 162,
+    "fields": {
+      "attacking_type": 9,
+      "defending_type": 18,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 163,
+    "fields": {
+      "attacking_type": 10,
+      "defending_type": 1,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 164,
+    "fields": {
+      "attacking_type": 10,
+      "defending_type": 2,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 165,
+    "fields": {
+      "attacking_type": 10,
+      "defending_type": 3,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 166,
+    "fields": {
+      "attacking_type": 10,
+      "defending_type": 4,
+      "multiplier": "0.5"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 167,
+    "fields": {
+      "attacking_type": 10,
+      "defending_type": 5,
+      "multiplier": "2.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 168,
+    "fields": {
+      "attacking_type": 10,
+      "defending_type": 6,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 169,
+    "fields": {
+      "attacking_type": 10,
+      "defending_type": 7,
+      "multiplier": "2.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 170,
+    "fields": {
+      "attacking_type": 10,
+      "defending_type": 8,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 171,
+    "fields": {
+      "attacking_type": 10,
+      "defending_type": 9,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 172,
+    "fields": {
+      "attacking_type": 10,
+      "defending_type": 10,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 173,
+    "fields": {
+      "attacking_type": 10,
+      "defending_type": 11,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 174,
+    "fields": {
+      "attacking_type": 10,
+      "defending_type": 12,
+      "multiplier": "2.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 175,
+    "fields": {
+      "attacking_type": 10,
+      "defending_type": 13,
+      "multiplier": "0.5"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 176,
+    "fields": {
+      "attacking_type": 10,
+      "defending_type": 14,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 177,
+    "fields": {
+      "attacking_type": 10,
+      "defending_type": 15,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 178,
+    "fields": {
+      "attacking_type": 10,
+      "defending_type": 16,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 179,
+    "fields": {
+      "attacking_type": 10,
+      "defending_type": 17,
+      "multiplier": "0.5"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 180,
+    "fields": {
+      "attacking_type": 10,
+      "defending_type": 18,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 181,
+    "fields": {
+      "attacking_type": 11,
+      "defending_type": 1,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 182,
+    "fields": {
+      "attacking_type": 11,
+      "defending_type": 2,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 183,
+    "fields": {
+      "attacking_type": 11,
+      "defending_type": 3,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 184,
+    "fields": {
+      "attacking_type": 11,
+      "defending_type": 4,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 185,
+    "fields": {
+      "attacking_type": 11,
+      "defending_type": 5,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 186,
+    "fields": {
+      "attacking_type": 11,
+      "defending_type": 6,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 187,
+    "fields": {
+      "attacking_type": 11,
+      "defending_type": 7,
+      "multiplier": "2.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 188,
+    "fields": {
+      "attacking_type": 11,
+      "defending_type": 8,
+      "multiplier": "2.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 189,
+    "fields": {
+      "attacking_type": 11,
+      "defending_type": 9,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 190,
+    "fields": {
+      "attacking_type": 11,
+      "defending_type": 10,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 191,
+    "fields": {
+      "attacking_type": 11,
+      "defending_type": 11,
+      "multiplier": "0.5"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 192,
+    "fields": {
+      "attacking_type": 11,
+      "defending_type": 12,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 193,
+    "fields": {
+      "attacking_type": 11,
+      "defending_type": 13,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 194,
+    "fields": {
+      "attacking_type": 11,
+      "defending_type": 14,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 195,
+    "fields": {
+      "attacking_type": 11,
+      "defending_type": 15,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 196,
+    "fields": {
+      "attacking_type": 11,
+      "defending_type": 16,
+      "multiplier": "0.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 197,
+    "fields": {
+      "attacking_type": 11,
+      "defending_type": 17,
+      "multiplier": "0.5"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 198,
+    "fields": {
+      "attacking_type": 11,
+      "defending_type": 18,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 199,
+    "fields": {
+      "attacking_type": 12,
+      "defending_type": 1,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 200,
+    "fields": {
+      "attacking_type": 12,
+      "defending_type": 2,
+      "multiplier": "0.5"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 201,
+    "fields": {
+      "attacking_type": 12,
+      "defending_type": 3,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 202,
+    "fields": {
+      "attacking_type": 12,
+      "defending_type": 4,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 203,
+    "fields": {
+      "attacking_type": 12,
+      "defending_type": 5,
+      "multiplier": "2.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 204,
+    "fields": {
+      "attacking_type": 12,
+      "defending_type": 6,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 205,
+    "fields": {
+      "attacking_type": 12,
+      "defending_type": 7,
+      "multiplier": "0.5"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 206,
+    "fields": {
+      "attacking_type": 12,
+      "defending_type": 8,
+      "multiplier": "0.5"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 207,
+    "fields": {
+      "attacking_type": 12,
+      "defending_type": 9,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 208,
+    "fields": {
+      "attacking_type": 12,
+      "defending_type": 10,
+      "multiplier": "0.5"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 209,
+    "fields": {
+      "attacking_type": 12,
+      "defending_type": 11,
+      "multiplier": "2.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 210,
+    "fields": {
+      "attacking_type": 12,
+      "defending_type": 12,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 211,
+    "fields": {
+      "attacking_type": 12,
+      "defending_type": 13,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 212,
+    "fields": {
+      "attacking_type": 12,
+      "defending_type": 14,
+      "multiplier": "0.5"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 213,
+    "fields": {
+      "attacking_type": 12,
+      "defending_type": 15,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 214,
+    "fields": {
+      "attacking_type": 12,
+      "defending_type": 16,
+      "multiplier": "2.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 215,
+    "fields": {
+      "attacking_type": 12,
+      "defending_type": 17,
+      "multiplier": "0.5"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 216,
+    "fields": {
+      "attacking_type": 12,
+      "defending_type": 18,
+      "multiplier": "0.5"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 217,
+    "fields": {
+      "attacking_type": 13,
+      "defending_type": 1,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 218,
+    "fields": {
+      "attacking_type": 13,
+      "defending_type": 2,
+      "multiplier": "2.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 219,
+    "fields": {
+      "attacking_type": 13,
+      "defending_type": 3,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 220,
+    "fields": {
+      "attacking_type": 13,
+      "defending_type": 4,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 221,
+    "fields": {
+      "attacking_type": 13,
+      "defending_type": 5,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 222,
+    "fields": {
+      "attacking_type": 13,
+      "defending_type": 6,
+      "multiplier": "2.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 223,
+    "fields": {
+      "attacking_type": 13,
+      "defending_type": 7,
+      "multiplier": "0.5"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 224,
+    "fields": {
+      "attacking_type": 13,
+      "defending_type": 8,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 225,
+    "fields": {
+      "attacking_type": 13,
+      "defending_type": 9,
+      "multiplier": "0.5"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 226,
+    "fields": {
+      "attacking_type": 13,
+      "defending_type": 10,
+      "multiplier": "2.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 227,
+    "fields": {
+      "attacking_type": 13,
+      "defending_type": 11,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 228,
+    "fields": {
+      "attacking_type": 13,
+      "defending_type": 12,
+      "multiplier": "2.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 229,
+    "fields": {
+      "attacking_type": 13,
+      "defending_type": 13,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 230,
+    "fields": {
+      "attacking_type": 13,
+      "defending_type": 14,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 231,
+    "fields": {
+      "attacking_type": 13,
+      "defending_type": 15,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 232,
+    "fields": {
+      "attacking_type": 13,
+      "defending_type": 16,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 233,
+    "fields": {
+      "attacking_type": 13,
+      "defending_type": 17,
+      "multiplier": "0.5"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 234,
+    "fields": {
+      "attacking_type": 13,
+      "defending_type": 18,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 235,
+    "fields": {
+      "attacking_type": 14,
+      "defending_type": 1,
+      "multiplier": "0.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 236,
+    "fields": {
+      "attacking_type": 14,
+      "defending_type": 2,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 237,
+    "fields": {
+      "attacking_type": 14,
+      "defending_type": 3,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 238,
+    "fields": {
+      "attacking_type": 14,
+      "defending_type": 4,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 239,
+    "fields": {
+      "attacking_type": 14,
+      "defending_type": 5,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 240,
+    "fields": {
+      "attacking_type": 14,
+      "defending_type": 6,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 241,
+    "fields": {
+      "attacking_type": 14,
+      "defending_type": 7,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 242,
+    "fields": {
+      "attacking_type": 14,
+      "defending_type": 8,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 243,
+    "fields": {
+      "attacking_type": 14,
+      "defending_type": 9,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 244,
+    "fields": {
+      "attacking_type": 14,
+      "defending_type": 10,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 245,
+    "fields": {
+      "attacking_type": 14,
+      "defending_type": 11,
+      "multiplier": "2.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 246,
+    "fields": {
+      "attacking_type": 14,
+      "defending_type": 12,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 247,
+    "fields": {
+      "attacking_type": 14,
+      "defending_type": 13,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 248,
+    "fields": {
+      "attacking_type": 14,
+      "defending_type": 14,
+      "multiplier": "2.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 249,
+    "fields": {
+      "attacking_type": 14,
+      "defending_type": 15,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 250,
+    "fields": {
+      "attacking_type": 14,
+      "defending_type": 16,
+      "multiplier": "0.5"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 251,
+    "fields": {
+      "attacking_type": 14,
+      "defending_type": 17,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 252,
+    "fields": {
+      "attacking_type": 14,
+      "defending_type": 18,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 253,
+    "fields": {
+      "attacking_type": 15,
+      "defending_type": 1,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 254,
+    "fields": {
+      "attacking_type": 15,
+      "defending_type": 2,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 255,
+    "fields": {
+      "attacking_type": 15,
+      "defending_type": 3,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 256,
+    "fields": {
+      "attacking_type": 15,
+      "defending_type": 4,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 257,
+    "fields": {
+      "attacking_type": 15,
+      "defending_type": 5,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 258,
+    "fields": {
+      "attacking_type": 15,
+      "defending_type": 6,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 259,
+    "fields": {
+      "attacking_type": 15,
+      "defending_type": 7,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 260,
+    "fields": {
+      "attacking_type": 15,
+      "defending_type": 8,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 261,
+    "fields": {
+      "attacking_type": 15,
+      "defending_type": 9,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 262,
+    "fields": {
+      "attacking_type": 15,
+      "defending_type": 10,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 263,
+    "fields": {
+      "attacking_type": 15,
+      "defending_type": 11,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 264,
+    "fields": {
+      "attacking_type": 15,
+      "defending_type": 12,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 265,
+    "fields": {
+      "attacking_type": 15,
+      "defending_type": 13,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 266,
+    "fields": {
+      "attacking_type": 15,
+      "defending_type": 14,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 267,
+    "fields": {
+      "attacking_type": 15,
+      "defending_type": 15,
+      "multiplier": "2.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 268,
+    "fields": {
+      "attacking_type": 15,
+      "defending_type": 16,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 269,
+    "fields": {
+      "attacking_type": 15,
+      "defending_type": 17,
+      "multiplier": "0.5"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 270,
+    "fields": {
+      "attacking_type": 15,
+      "defending_type": 18,
+      "multiplier": "0.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 271,
+    "fields": {
+      "attacking_type": 16,
+      "defending_type": 1,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 272,
+    "fields": {
+      "attacking_type": 16,
+      "defending_type": 2,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 273,
+    "fields": {
+      "attacking_type": 16,
+      "defending_type": 3,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 274,
+    "fields": {
+      "attacking_type": 16,
+      "defending_type": 4,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 275,
+    "fields": {
+      "attacking_type": 16,
+      "defending_type": 5,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 276,
+    "fields": {
+      "attacking_type": 16,
+      "defending_type": 6,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 277,
+    "fields": {
+      "attacking_type": 16,
+      "defending_type": 7,
+      "multiplier": "0.5"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 278,
+    "fields": {
+      "attacking_type": 16,
+      "defending_type": 8,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 279,
+    "fields": {
+      "attacking_type": 16,
+      "defending_type": 9,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 280,
+    "fields": {
+      "attacking_type": 16,
+      "defending_type": 10,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 281,
+    "fields": {
+      "attacking_type": 16,
+      "defending_type": 11,
+      "multiplier": "2.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 282,
+    "fields": {
+      "attacking_type": 16,
+      "defending_type": 12,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 283,
+    "fields": {
+      "attacking_type": 16,
+      "defending_type": 13,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 284,
+    "fields": {
+      "attacking_type": 16,
+      "defending_type": 14,
+      "multiplier": "2.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 285,
+    "fields": {
+      "attacking_type": 16,
+      "defending_type": 15,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 286,
+    "fields": {
+      "attacking_type": 16,
+      "defending_type": 16,
+      "multiplier": "0.5"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 287,
+    "fields": {
+      "attacking_type": 16,
+      "defending_type": 17,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 288,
+    "fields": {
+      "attacking_type": 16,
+      "defending_type": 18,
+      "multiplier": "0.5"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 289,
+    "fields": {
+      "attacking_type": 17,
+      "defending_type": 1,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 290,
+    "fields": {
+      "attacking_type": 17,
+      "defending_type": 2,
+      "multiplier": "0.5"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 291,
+    "fields": {
+      "attacking_type": 17,
+      "defending_type": 3,
+      "multiplier": "0.5"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 292,
+    "fields": {
+      "attacking_type": 17,
+      "defending_type": 4,
+      "multiplier": "0.5"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 293,
+    "fields": {
+      "attacking_type": 17,
+      "defending_type": 5,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 294,
+    "fields": {
+      "attacking_type": 17,
+      "defending_type": 6,
+      "multiplier": "2.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 295,
+    "fields": {
+      "attacking_type": 17,
+      "defending_type": 7,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 296,
+    "fields": {
+      "attacking_type": 17,
+      "defending_type": 8,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 297,
+    "fields": {
+      "attacking_type": 17,
+      "defending_type": 9,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 298,
+    "fields": {
+      "attacking_type": 17,
+      "defending_type": 10,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 299,
+    "fields": {
+      "attacking_type": 17,
+      "defending_type": 11,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 300,
+    "fields": {
+      "attacking_type": 17,
+      "defending_type": 12,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 301,
+    "fields": {
+      "attacking_type": 17,
+      "defending_type": 13,
+      "multiplier": "2.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 302,
+    "fields": {
+      "attacking_type": 17,
+      "defending_type": 14,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 303,
+    "fields": {
+      "attacking_type": 17,
+      "defending_type": 15,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 304,
+    "fields": {
+      "attacking_type": 17,
+      "defending_type": 16,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 305,
+    "fields": {
+      "attacking_type": 17,
+      "defending_type": 17,
+      "multiplier": "0.5"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 306,
+    "fields": {
+      "attacking_type": 17,
+      "defending_type": 18,
+      "multiplier": "2.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 307,
+    "fields": {
+      "attacking_type": 18,
+      "defending_type": 1,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 308,
+    "fields": {
+      "attacking_type": 18,
+      "defending_type": 2,
+      "multiplier": "0.5"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 309,
+    "fields": {
+      "attacking_type": 18,
+      "defending_type": 3,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 310,
+    "fields": {
+      "attacking_type": 18,
+      "defending_type": 4,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 311,
+    "fields": {
+      "attacking_type": 18,
+      "defending_type": 5,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 312,
+    "fields": {
+      "attacking_type": 18,
+      "defending_type": 6,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 313,
+    "fields": {
+      "attacking_type": 18,
+      "defending_type": 7,
+      "multiplier": "2.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 314,
+    "fields": {
+      "attacking_type": 18,
+      "defending_type": 8,
+      "multiplier": "0.5"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 315,
+    "fields": {
+      "attacking_type": 18,
+      "defending_type": 9,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 316,
+    "fields": {
+      "attacking_type": 18,
+      "defending_type": 10,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 317,
+    "fields": {
+      "attacking_type": 18,
+      "defending_type": 11,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 318,
+    "fields": {
+      "attacking_type": 18,
+      "defending_type": 12,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 319,
+    "fields": {
+      "attacking_type": 18,
+      "defending_type": 13,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 320,
+    "fields": {
+      "attacking_type": 18,
+      "defending_type": 14,
+      "multiplier": "1.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 321,
+    "fields": {
+      "attacking_type": 18,
+      "defending_type": 15,
+      "multiplier": "2.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 322,
+    "fields": {
+      "attacking_type": 18,
+      "defending_type": 16,
+      "multiplier": "2.0"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 323,
+    "fields": {
+      "attacking_type": 18,
+      "defending_type": 17,
+      "multiplier": "0.5"
+    }
+  },
+  {
+    "model": "pokedex.typeeffectiveness",
+    "pk": 324,
+    "fields": {
+      "attacking_type": 18,
+      "defending_type": 18,
+      "multiplier": "1.0"
+    }
+  }
+]

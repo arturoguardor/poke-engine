@@ -1,0 +1,10 @@
+[flake8]
+max-line-length = 88
+# E501: black maneja el largo de línea; no puede romper strings en docstrings/comentarios
+# E203, W503: compatibilidad con black (operadores al inicio/final de línea)
+extend-ignore = E203, W503, E501
+exclude =
+    migrations,
+    .git,
+    __pycache__,
+    .venv
