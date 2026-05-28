@@ -1,0 +1,892 @@
+{
+  "info": {
+    "_postman_id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+    "name": "poke-engine",
+    "description": "API REST para gestion de Pokemons y sistema de combate por turnos.\n\nVariables de coleccion:\n- `base_url`: http://127.0.0.1:8000\n- `pokemon_id`: ID de BasePokemon (default: 1)\n- `move_id`: ID de Move (default: 1)\n- `my_pokemon_id`: ID de MyPokemon (default: 1)\n- `battle_id`: ID de Battle (default: 1)\n\nFlujo recomendado:\n1. Calcular daño (sin persistir)\n2. Atrapar un Pokemon (POST /my-pokemon/catch/)\n3. Crear batalla (POST /battles/)\n4. Ejecutar turnos (POST /battles/{id}/turn/)\n5. Ver estado final (GET /battles/{id}/)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://127.0.0.1:8000",
+      "type": "string"
+    },
+    {
+      "key": "pokemon_id",
+      "value": "1",
+      "type": "string"
+    },
+    {
+      "key": "move_id",
+      "value": "1",
+      "type": "string"
+    },
+    {
+      "key": "my_pokemon_id",
+      "value": "1",
+      "type": "string"
+    },
+    {
+      "key": "battle_id",
+      "value": "1",
+      "type": "string"
+    }
+  ],
+  "item": [
+    {
+      "name": "Tipos",
+      "description": "Tipos de Pokemon (solo lectura). Se cargan desde fixture type_effectiveness.json.",
+      "item": [
+        {
+          "name": "Listar tipos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/types/",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "types", ""]
+            },
+            "description": "Retorna todos los tipos de Pokemon (18 tipos: fire, water, grass, etc.)."
+          }
+        },
+        {
+          "name": "Detalle de tipo",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/types/{{pokemon_id}}/",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "types", "{{pokemon_id}}", ""]
+            },
+            "description": "Retorna el detalle de un tipo por ID."
+          }
+        }
+      ]
+    },
+    {
+      "name": "BasePokemon",
+      "description": "CRUD de especies base de Pokemon mas endpoints de consulta relacional y seeding desde PokeAPI.",
+      "item": [
+        {
+          "name": "Listar Pokemon",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/pokemon/",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "pokemon", ""]
+            },
+            "description": "Retorna todos los BasePokemon registrados con sus tipos y movimientos aprendibles."
+          }
+        },
+        {
+          "name": "Crear Pokemon",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"mewtwo\",\n  \"type_primary_id\": 11,\n  \"base_hp\": 106,\n  \"base_attack\": 110,\n  \"base_defense\": 90,\n  \"base_sp_attack\": 154,\n  \"base_sp_defense\": 90,\n  \"base_speed\": 130\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/v1/pokemon/",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "pokemon", ""]
+            },
+            "description": "Crea un BasePokemon manualmente. type_primary_id referencia al ID de PokemonType.\nCampos opcionales: type_secondary_id, pokeapi_id."
+          }
+        },
+        {
+          "name": "Importar desde PokeAPI",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name_or_id\": \"ditto\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/v1/pokemon/fetch/",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "pokemon", "fetch", ""]
+            },
+            "description": "Importa un BasePokemon desde PokeAPI por nombre o ID numerico.\nEjemplos: {\"name_or_id\": \"pikachu\"}, {\"name_or_id\": 25}.\nRequiere conexion a internet. Si ya existe, retorna el existente (no duplica)."
+          }
+        },
+        {
+          "name": "Detalle de Pokemon",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/pokemon/{{pokemon_id}}/",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "pokemon", "{{pokemon_id}}", ""]
+            },
+            "description": "Retorna el detalle completo de un BasePokemon: tipos, stats base y movimientos aprendibles."
+          }
+        },
+        {
+          "name": "Actualizar Pokemon (completo)",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"bulbasaur\",\n  \"type_primary_id\": 5,\n  \"type_secondary_id\": 8,\n  \"base_hp\": 45,\n  \"base_attack\": 49,\n  \"base_defense\": 49,\n  \"base_sp_attack\": 65,\n  \"base_sp_defense\": 65,\n  \"base_speed\": 45\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/v1/pokemon/{{pokemon_id}}/",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "pokemon", "{{pokemon_id}}", ""]
+            },
+            "description": "Reemplaza completamente un BasePokemon. Todos los campos requeridos deben enviarse."
+          }
+        },
+        {
+          "name": "Actualizar Pokemon (parcial)",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"base_speed\": 50\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/v1/pokemon/{{pokemon_id}}/",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "pokemon", "{{pokemon_id}}", ""]
+            },
+            "description": "Actualiza uno o varios campos de un BasePokemon sin necesidad de enviar todos."
+          }
+        },
+        {
+          "name": "Eliminar Pokemon",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/pokemon/{{pokemon_id}}/",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "pokemon", "{{pokemon_id}}", ""]
+            },
+            "description": "Elimina un BasePokemon. Retorna 204 No Content.\nFallara con 409 si existen MyPokemon instancias que referencian esta especie (PROTECT)."
+          }
+        },
+        {
+          "name": "Movimientos del mismo tipo",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/pokemon/{{pokemon_id}}/moves/",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "pokemon", "{{pokemon_id}}", "moves", ""]
+            },
+            "description": "Retorna todos los Move cuyo tipo coincide con el tipo primario o secundario del Pokemon.\nNOTA: No filtra por movimientos que el Pokemon puede aprender — filtra por coincidencia de tipo.\nPara movimientos asignables, usar /possible-moves/."
+          }
+        },
+        {
+          "name": "Movimientos posibles (aprendibles)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/pokemon/{{pokemon_id}}/possible-moves/",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "pokemon", "{{pokemon_id}}", "possible-moves", ""]
+            },
+            "description": "Retorna los movimientos que esta especie puede aprender (relacion M2M learnable_moves).\nUsar este endpoint para saber que move_ids son validos al crear un MyPokemon con /catch/."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Movimientos",
+      "description": "CRUD de movimientos (Move) y consulta de que Pokemon pueden aprenderlos.",
+      "item": [
+        {
+          "name": "Listar movimientos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/moves/",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "moves", ""]
+            },
+            "description": "Retorna todos los movimientos registrados con su tipo, poder y especies que los aprenden."
+          }
+        },
+        {
+          "name": "Crear movimiento",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"thunderbolt\",\n  \"move_type_id\": 4,\n  \"power\": 90\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/v1/moves/",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "moves", ""]
+            },
+            "description": "Crea un movimiento. move_type_id referencia al ID de PokemonType.\nCampo opcional: pokeapi_id."
+          }
+        },
+        {
+          "name": "Detalle de movimiento",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/moves/{{move_id}}/",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "moves", "{{move_id}}", ""]
+            },
+            "description": "Retorna el detalle de un movimiento: tipo, poder y lista de BasePokemon que lo pueden aprender."
+          }
+        },
+        {
+          "name": "Actualizar movimiento (completo)",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"ember\",\n  \"move_type_id\": 2,\n  \"power\": 40\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/v1/moves/{{move_id}}/",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "moves", "{{move_id}}", ""]
+            },
+            "description": "Reemplaza completamente un movimiento."
+          }
+        },
+        {
+          "name": "Actualizar movimiento (parcial)",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"power\": 50\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/v1/moves/{{move_id}}/",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "moves", "{{move_id}}", ""]
+            },
+            "description": "Actualiza uno o varios campos de un movimiento."
+          }
+        },
+        {
+          "name": "Eliminar movimiento",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/moves/{{move_id}}/",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "moves", "{{move_id}}", ""]
+            },
+            "description": "Elimina un movimiento. Retorna 204 No Content.\nFallara si algun MyPokemon tiene este movimiento asignado (PROTECT)."
+          }
+        },
+        {
+          "name": "Pokemon que aprenden este movimiento",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/moves/{{move_id}}/pokemon/",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "moves", "{{move_id}}", "pokemon", ""]
+            },
+            "description": "Retorna los BasePokemon que tienen este movimiento en su lista de movimientos aprendibles (learnable_by)."
+          }
+        }
+      ]
+    },
+    {
+      "name": "MyPokemon",
+      "description": "Instancias de Pokemon propias: CRUD, atrapar, curar. Cada instancia es unica e irrepetible con su propio nivel, stats calculadas y movimientos.",
+      "item": [
+        {
+          "name": "Listar mis Pokemon",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/my-pokemon/",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "my-pokemon", ""]
+            },
+            "description": "Retorna todas las instancias de MyPokemon con sus stats calculadas (hp_current, attack, defense, speed, etc.)."
+          }
+        },
+        {
+          "name": "Atrapar Pokemon",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"base_pokemon_id\": 1,\n  \"level\": 50,\n  \"move_ids\": [1, 2]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/v1/my-pokemon/catch/",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "my-pokemon", "catch", ""]
+            },
+            "description": "Crea una instancia de MyPokemon. Las stats se calculan automaticamente segun el nivel.\n\nReglas:\n- move_ids: maximo 4 movimientos\n- move_ids: solo movimientos que la especie puede aprender (ver /pokemon/{id}/possible-moves/)\n- nivel: 1-100 (default 50)\n- nickname: opcional\n\nUsar /api/v1/pokemon/{id}/possible-moves/ para obtener los move_ids validos."
+          }
+        },
+        {
+          "name": "Crear MyPokemon (alternativo)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"base_pokemon\": 1,\n  \"level\": 30,\n  \"nickname\": \"Char\",\n  \"moves\": [1]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/v1/my-pokemon/",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "my-pokemon", ""]
+            },
+            "description": "Alternativa a /catch/. Mismas reglas de validacion.\nLa diferencia es semantica: /catch/ es el endpoint expresivo; POST / es el endpoint CRUD estandar."
+          }
+        },
+        {
+          "name": "Detalle de MyPokemon",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/my-pokemon/{{my_pokemon_id}}/",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "my-pokemon", "{{my_pokemon_id}}", ""]
+            },
+            "description": "Retorna el detalle completo de una instancia: especie, nivel, HP actual/maximo, todas las stats, movimientos asignados."
+          }
+        },
+        {
+          "name": "Actualizar MyPokemon (completo)",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"base_pokemon\": 1,\n  \"level\": 75,\n  \"nickname\": \"BlazeMaster\",\n  \"moves\": [1, 2]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/v1/my-pokemon/{{my_pokemon_id}}/",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "my-pokemon", "{{my_pokemon_id}}", ""]
+            },
+            "description": "Reemplaza completamente una instancia de MyPokemon. Si cambia el nivel, las stats se recalculan automaticamente."
+          }
+        },
+        {
+          "name": "Actualizar MyPokemon (parcial)",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nickname\": \"Sparky\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/v1/my-pokemon/{{my_pokemon_id}}/",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "my-pokemon", "{{my_pokemon_id}}", ""]
+            },
+            "description": "Actualiza uno o varios campos de una instancia de MyPokemon."
+          }
+        },
+        {
+          "name": "Eliminar MyPokemon",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/my-pokemon/{{my_pokemon_id}}/",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "my-pokemon", "{{my_pokemon_id}}", ""]
+            },
+            "description": "Elimina una instancia de MyPokemon. Retorna 204 No Content.\nFallara si el Pokemon esta participando en una batalla activa (PROTECT)."
+          }
+        },
+        {
+          "name": "Curar Pokemon",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/my-pokemon/{{my_pokemon_id}}/heal/",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "my-pokemon", "{{my_pokemon_id}}", "heal", ""]
+            },
+            "description": "Restaura hp_current a hp_max. No requiere body.\nUtil para reutilizar un Pokemon despues de una batalla donde quedo debilitado (hp = 0)."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Calculo de Daño",
+      "description": "Parte 1 del enunciado: calculo de daño con la formula del PDF sin persistir nada en BD.",
+      "item": [
+        {
+          "name": "Calcular daño",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"attacker_id\": 1,\n  \"move_id\": 1,\n  \"defender_id\": 2\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/v1/damage/calculate/",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "damage", "calculate", ""]
+            },
+            "description": "Calcula el daño de un ataque sin modificar ninguna base de datos.\n\nFormula:\n  Daño = {[(2*Nivel/5+2) * Ataque * Poder / Defensa] / 50} * Efectividad * Random/100\n\nCampos requeridos:\n- attacker_id: ID de MyPokemon atacante\n- move_id: ID del movimiento a usar\n- defender_id: ID de MyPokemon defensor\n\nRespuesta incluye: damage, effectiveness, random_factor.\nEfectividad: 0.0 (inmune), 0.5 (poco efectivo), 1.0 (neutro), 2.0 (superefectivo).\nPara tipo dual: efectividad = producto de ambas (ej: 2.0 * 0.5 = 1.0)."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Batallas",
+      "description": "Parte 3 del enunciado: sistema de batalla por turnos con estado ONGOING -> FINISHED.",
+      "item": [
+        {
+          "name": "Listar batallas",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/battles/",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "battles", ""]
+            },
+            "description": "Retorna todas las batallas ordenadas por fecha de creacion (mas recientes primero)."
+          }
+        },
+        {
+          "name": "Crear batalla",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"pokemon_1_id\": 1,\n  \"pokemon_2_id\": 2\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/v1/battles/",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "battles", ""]
+            },
+            "description": "Crea una nueva batalla entre dos MyPokemon.\n\nValidaciones:\n- Ambos Pokemon deben tener hp_current > 0 (usar /heal/ si estan debilitados)\n- Ambos deben tener al menos 1 movimiento asignado\n- No pueden ser el mismo Pokemon\n\nEstado inicial: ONGOING, current_turn: 1."
+          }
+        },
+        {
+          "name": "Ver estado de batalla",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/battles/{{battle_id}}/",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "battles", "{{battle_id}}", ""]
+            },
+            "description": "Retorna el estado completo de la batalla:\n- Status (ongoing / finished)\n- HP actual de ambos Pokemon\n- Ganador (si la batalla termino)\n- Historial completo de turnos con: danio, efectividad, factor aleatorio, HP antes/despues."
+          }
+        },
+        {
+          "name": "Ejecutar turno",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"attacker_id\": 1,\n  \"move_id\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/v1/battles/{{battle_id}}/turn/",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "battles", "{{battle_id}}", "turn", ""]
+            },
+            "description": "Ejecuta un turno de batalla.\n\nCampos requeridos:\n- attacker_id: ID de MyPokemon (debe ser pokemon_1 o pokemon_2 de esta batalla)\n- move_id: ID del movimiento a usar (debe pertenecer al atacante)\n\nValidaciones:\n- La batalla debe estar ONGOING\n- El atacante no puede estar debilitado (hp_current = 0)\n- El movimiento debe pertenecer al atacante\n\nRespuesta incluye:\n- Turno registrado con todos los datos del calculo\n- warning: si el atacante es mas lento que el defensor (informativo, no bloquea)\n\nCuando el defensor llega a 0 HP: status -> FINISHED, winner = atacante.\nOperacion atomica: si algo falla, el HP no queda modificado."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Flujo completo de ejemplo",
+      "description": "Secuencia recomendada para demostrar el sistema completo de extremo a extremo.",
+      "item": [
+        {
+          "name": "1. Ver Pokemon disponibles",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/pokemon/",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "pokemon", ""]
+            },
+            "description": "Paso 1: Ver que BasePokemon existen tras el seeding inicial."
+          }
+        },
+        {
+          "name": "2. Ver movimientos aprendibles de Charmander",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/pokemon/2/possible-moves/",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "pokemon", "2", "possible-moves", ""]
+            },
+            "description": "Paso 2: Descubrir que move_ids se pueden asignar a Charmander (ID 2 si fue el segundo en el seed).\nAjustar el ID segun la respuesta del paso 1."
+          }
+        },
+        {
+          "name": "3. Atrapar Charmander nivel 50",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"base_pokemon_id\": 2,\n  \"level\": 50,\n  \"move_ids\": [1, 2]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/v1/my-pokemon/catch/",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "my-pokemon", "catch", ""]
+            },
+            "description": "Paso 3: Crear instancia de Charmander. Ajustar base_pokemon_id y move_ids segun los pasos anteriores."
+          }
+        },
+        {
+          "name": "4. Atrapar Squirtle nivel 50",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"base_pokemon_id\": 3,\n  \"level\": 50,\n  \"move_ids\": [3, 4]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/v1/my-pokemon/catch/",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "my-pokemon", "catch", ""]
+            },
+            "description": "Paso 4: Crear instancia de Squirtle. Ajustar base_pokemon_id y move_ids segun el paso 1."
+          }
+        },
+        {
+          "name": "5. Probar calculo de daño (sin persistir)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"attacker_id\": 1,\n  \"move_id\": 3,\n  \"defender_id\": 2\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/v1/damage/calculate/",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "damage", "calculate", ""]
+            },
+            "description": "Paso 5: Calcular cuanto danio haria Squirtle a Charmander con su movimiento de agua (superefectivo x2). Ajustar IDs segun pasos anteriores."
+          }
+        },
+        {
+          "name": "6. Crear batalla Charmander vs Squirtle",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"pokemon_1_id\": 1,\n  \"pokemon_2_id\": 2\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/v1/battles/",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "battles", ""]
+            },
+            "description": "Paso 6: Iniciar batalla. Ajustar pokemon_1_id y pokemon_2_id con los IDs de MyPokemon creados en pasos 3 y 4."
+          }
+        },
+        {
+          "name": "7. Turno 1: Charmander ataca",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"attacker_id\": 1,\n  \"move_id\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/v1/battles/{{battle_id}}/turn/",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "battles", "{{battle_id}}", "turn", ""]
+            },
+            "description": "Paso 7: Ejecutar turno 1. Charmander (fuego) ataca a Squirtle (agua) -> poco efectivo (x0.5). Ajustar battle_id."
+          }
+        },
+        {
+          "name": "8. Turno 2: Squirtle contraataca",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"attacker_id\": 2,\n  \"move_id\": 3\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/v1/battles/{{battle_id}}/turn/",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "battles", "{{battle_id}}", "turn", ""]
+            },
+            "description": "Paso 8: Squirtle (agua) ataca a Charmander (fuego) -> superefectivo (x2). Ajustar IDs."
+          }
+        },
+        {
+          "name": "9. Ver estado + historial de la batalla",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/battles/{{battle_id}}/",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "battles", "{{battle_id}}", ""]
+            },
+            "description": "Paso 9: Ver el estado actual de la batalla, HP de ambos Pokemon y el historial completo de turnos."
+          }
+        },
+        {
+          "name": "10. Curar Pokemon debilitado",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/my-pokemon/{{my_pokemon_id}}/heal/",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "my-pokemon", "{{my_pokemon_id}}", "heal", ""]
+            },
+            "description": "Paso 10: Si un Pokemon quedo debilitado (hp = 0), restaurar su HP para poder usarlo en una nueva batalla."
+          }
+        }
+      ]
+    }
+  ]
+}
