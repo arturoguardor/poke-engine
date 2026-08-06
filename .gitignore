@@ -1,43 +1,42 @@
-# Python
-__pycache__/
-*.py[cod]
-*.pyo
-*.pyd
-*.pycache
-.Python
+# DevTools — Planes activos e índice (no se commitean)
+plans/active/
+plans/INDEX.md
 
-# Virtual environment
+# Archivos de review (generados por el flujo multi-AI)
+plans/**/*-REVIEW.md
+plans/**/.review-*
+
+# Dependencias
+node_modules/
+__pycache__/
+*.pyc
 .venv/
 venv/
-env/
 
 # Django
-*.log
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
 media/
 
-# Environment variables
-.env
-
-# Testing
+# Tests
 .coverage
 .pytest_cache/
 htmlcov/
 *.cover
 
-# Distribution
-build/
-dist/
-*.egg-info/
-
-# IDEs
-.idea/
+# IDE
 .vscode/
+.idea/
 *.swp
 *.swo
 
 # OS
 .DS_Store
 Thumbs.db
+
+# Entorno
+.env
+.env.local
+*.key
+*.pem
