@@ -1,0 +1,37 @@
+# Entornos virtuales
+.venv/
+venv/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Control de versiones
+.git/
+.gitignore
+
+# Tests y cobertura
+.pytest_cache/
+.coverage
+
+# Base de datos local (se gestiona vía volumen en docker-compose)
+db.sqlite3
+
+# Planes y herramientas de desarrollo internas
+plans/
+ai-specs/
+devtools-agentic/
+.claude/
+
+# Entorno
+.env
+.env.local
+*.key
+*.pem
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
