@@ -37,6 +37,8 @@ Fuente de datos: [PokéAPI](https://pokeapi.co) — seeding de 10 Pokémons real
 
 ## Instalación
 
+### Opción A: entorno virtual (venv)
+
 ```bash
 git clone https://github.com/arturoguardor/poke-engine.git
 cd poke-engine
@@ -56,11 +58,39 @@ python manage.py loaddata fixtures/type_effectiveness.json
 python manage.py seed_pokemon
 ```
 
-## Uso
-
 ```bash
 python manage.py runserver
 ```
+
+### Opción B: Docker
+
+Alternativa que no requiere tener Python 3.12 instalado localmente.
+
+```bash
+git clone https://github.com/arturoguardor/poke-engine.git
+cd poke-engine
+
+docker compose up --build
+```
+
+- Al arrancar, el contenedor aplica `migrate` y carga `fixtures/type_effectiveness.json`
+  automáticamente (`entrypoint.sh`) — no requiere pasos manuales adicionales.
+- El código fuente se monta como bind mount (`.:/app`): los cambios se reflejan sin reconstruir
+  la imagen.
+- `SECRET_KEY`, `DEBUG` y `ALLOWED_HOSTS` toman los mismos defaults que `config/settings.py`
+  (ver `.env.example`); si querés sobreescribirlos, creá un `.env` en la raíz del proyecto,
+  Docker Compose lo carga automáticamente.
+- Para cargar los 10 Pokémons reales desde PokéAPI (requiere conexión a internet), ejecutar
+  manualmente en un segundo terminal:
+
+  ```bash
+  docker compose exec web python manage.py seed_pokemon
+  ```
+
+- Esta imagen está pensada **solo para desarrollo local**: usa `manage.py runserver`, no un
+  servidor WSGI de producción como gunicorn, y `DEBUG=True` por defecto.
+
+## Uso
 
 - **Swagger UI**: http://127.0.0.1:8000/api/docs/
 - **Admin**: http://127.0.0.1:8000/admin/
@@ -208,5 +238,5 @@ Las siguientes decisiones van más allá del spec original con justificación t�
 - Golpes críticos: probabilidad 1/16, multiplicador ×1.5
 - Turno automático por velocidad: los dos Pokémon atacan en un solo request, ordenados por `speed`
 - JWT Authentication (djangorestframework-simplejwt)
-- Docker + docker-compose
 - GitHub Actions CI (lint + pytest en cada push)
+- Imagen Docker "production-ready" (gunicorn, `DEBUG=False`, `collectstatic`) — la actual es solo para desarrollo local
