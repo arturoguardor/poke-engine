@@ -1,10 +1,56 @@
-# DevTools — Planes activos e índice (no se commitean)
-plans/active/
-plans/INDEX.md
+# ─────────────────────────────────────────────────────────────────────
+# DevTools
+#
+# Regla general: lo que DevTools genera a partir de tu instalación local
+# NO se commitea, porque contiene rutas de tu máquina o duplica contenido
+# que ya vive en el repo de devtools. Lo que describe el proyecto SÍ.
+#
+# Se commitean (no aparecen aquí a propósito):
+#   devtools-manifest.json   versión y features del proyecto, portable
+#   plans/                   TODO: trabajo en curso, señales, historial
+#   plans/archive/           historial de tickets cerrados, con sus reviews
+#   plans/INDEX.md           índice + tu contenido curado (calendario, etc.)
+#
+# Un colaborador clona el repo, ejecuta init-project.sh y regenera todo lo
+# ignorado con las rutas de SU máquina.
+# ─────────────────────────────────────────────────────────────────────
 
-# Archivos de review (generados por el flujo multi-AI)
-plans/**/*-REVIEW.md
-plans/**/.review-*
+# Configuración de agentes: enlaces o copias de devtools/templates/.
+# En Windows git guarda el contenido volcado (duplica y queda obsoleto);
+# en Linux/macOS guarda la ruta absoluta (rota en cualquier otra máquina).
+AGENTS.md
+CLAUDE.md
+CLINE.md
+
+# Skills y agentes: enlace a devtools/ai-specs/
+# Sin barra final a propósito: donde los symlinks son reales (Linux, macOS,
+# WSL, CI) git ve ai-specs como un fichero, y "ai-specs/" solo casaría con
+# un directorio — es decir, se ignoraría en Windows pero no fuera de él.
+ai-specs
+
+# Directorios de agente. settings.json incluye la ruta absoluta al
+# post-plan.py de esta máquina, así que tampoco es portable: cada
+# desarrollador lo regenera con bin/install-hooks.py
+.claude/
+.cursor/
+
+# Reglas de rol para Cline: las genera bin/rules.py concatenando los SKILL.md
+# de ai-specs/. Es contenido duplicado del repo de devtools, no del proyecto,
+# y se regenera entero en cada devtools-sync.sh --update: versionarlo mete
+# decenas de KB de ruido en cada diff. Lo regenera quien clone.
+.clinerules/
+
+# plans/ NO se ignora, ni siquiera las señales.
+#
+# Se declararon "estado efímero" y era incorrecto: efímero significa
+# reconstruible, y una solicitud de review no lo es. Si se borra
+# .review-requested, nadie puede decir que se pidió un review el 3 de agosto:
+# es el único registro de que el ticket quedó esperando.
+#
+# Y desde que plans/active/ se versiona, el ticket viaja en git; su estado
+# tiene que viajar con él, o un clon ve la SPEC sin saber que hay un review
+# pendiente. Las señales se borran al archivar, cuando el veredicto ya vive
+# en el *-REVIEW.md.
 
 # Dependencias
 node_modules/
@@ -12,18 +58,6 @@ __pycache__/
 *.pyc
 .venv/
 venv/
-
-# Django
-local_settings.py
-db.sqlite3
-db.sqlite3-journal
-media/
-
-# Tests
-.coverage
-.pytest_cache/
-htmlcov/
-*.cover
 
 # IDE
 .vscode/
@@ -40,3 +74,13 @@ Thumbs.db
 .env.local
 *.key
 *.pem
+
+# --- Propio del proyecto ---
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+media/
+.coverage
+.pytest_cache/
+htmlcov/
+*.cover

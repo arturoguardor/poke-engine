@@ -1,0 +1,55 @@
+# devtools.yaml — cómo es este proyecto
+#
+# El manifiesto (devtools-manifest.json) describe cómo se instaló DevTools.
+# Este fichero describe el proyecto: qué stack usa, cómo se ejecutan sus tests
+# y qué IA cumple cada rol.
+#
+# TODO ES OPCIONAL. Sin este fichero, DevTools funciona igual que siempre; lo
+# que hace es evitar que la IA tenga que adivinar. Borra las claves que no
+# apliquen en vez de dejarlas vacías.
+#
+# Se commitea: describe el proyecto, no tu máquina.
+
+project:
+  # name: mi-api
+  # stack: django          # django | fastapi | flask | node | go | ...
+  name:
+  stack:
+
+testing:
+  # El comando que ejecuta la suite. Lo usan execute-step (para verificar cada
+  # paso) y archive-plan.py (para no archivar sobre tests en rojo).
+  # command: pytest -q
+  command:
+
+  # Dónde viven los tests. Evita que la IA cree tests/ cuando el proyecto usa
+  # tests.py dentro de cada app, o al revés.
+  # path: tests/
+  path:
+
+  # Solo informativo: el umbral real vive en .coveragerc o pyproject.toml, que
+  # es lo que ejecuta la herramienta. Aquí sirve para que la IA sepa a qué
+  # aspirar sin tener que leer ese fichero.
+  # coverage_threshold: 90
+  coverage_threshold:
+
+quality:
+  # lint_command: ruff check .
+  # format_command: ruff format .
+  lint_command:
+  format_command:
+
+roles:
+  # Qué IA cumple cada rol en este proyecto. Sin esto se deduce de qué
+  # plantillas están instaladas (CLAUDE.md → builder, CLINE.md → reviewer),
+  # que funciona pero no permite decir "Cursor es mi Builder".
+  # builder: claude-code
+  # reviewer: cline
+  builder: cline
+  reviewer: claude-code
+
+jira:
+  # project_key: PROJ
+  # jql: assignee = currentUser() AND status = "To Do"
+  project_key:
+  jql:
