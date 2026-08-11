@@ -1,9 +1,10 @@
 # Índice de planes activos
 
-| Ticket    | Título                                           | Estado                                                   |
-| --------- | ------------------------------------------------ | -------------------------------------------------------- |
-| DOCKERIZE | Dockerizar poke-engine (uso local de desarrollo) | ✅ Implementado — esperando review (`.review-requested`) |
-| PROJ-42   | Rate Limiting                                    | 🟡 Borrador (plan sin SPEC)                              |
+| Ticket    | Título                                                     | Estado                                                   |
+| --------- | ---------------------------------------------------------- | -------------------------------------------------------- |
+| SEC-001   | Hardening de settings: DEBUG=False y ALLOWED_HOSTS seguros | ✅ Implementado — verificado, pendiente de commit        |
+| DOCKERIZE | Dockerizar poke-engine (uso local de desarrollo)           | ✅ Implementado — esperando review (`.review-requested`) |
+| PROJ-42   | Rate Limiting                                              | 🟡 Borrador (plan sin SPEC)                              |
 
 ## Backlog de mejoras
 

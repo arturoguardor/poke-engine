@@ -1,0 +1,17 @@
+# Evidencia GREEN — SEC-001, paso 2
+# Comando: python -m pytest -q
+# Código de salida: 0
+# Fecha: 2026-08-11T13:06:35.884840+00:00
+----------------------------------------------------------------------
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-8.3.5, pluggy-1.6.0
+django: version: 5.1.7, settings: config.settings (from ini)
+rootdir: C:\Users\PC165\Documents\Personales\arturoguardor\poke-engine
+configfile: pytest.ini
+plugins: cov-6.0.0, django-4.9.0
+collected 9 items
+
+tests\pokedex\test_damage_service.py .......                             [ 77%]
+tests\test_settings.py ..                                                [100%]
+
+============================== 9 passed in 0.79s ==============================

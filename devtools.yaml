@@ -17,7 +17,11 @@ project:
 testing:
   # El comando que ejecuta la suite. Lo usan execute-step (para verificar cada
   # paso) y archive-plan.py (para no archivar sobre tests en rojo).
-  command: pytest -q
+  # Se usa `python -m pytest` en vez de `pytest` directamente: el launcher
+  # `pytest.exe` del venv guarda la ruta absoluta al intérprete en el momento
+  # de crearlo, y si el proyecto se mueve de carpeta rompe ("Fatal error in
+  # launcher"). `python -m pytest` resuelve el módulo por cwd y es portable.
+  command: python -m pytest -q
 
   # Dónde viven los tests. Evita que la IA cree tests/ cuando el proyecto usa
   # tests.py dentro de cada app, o al revés.
@@ -29,8 +33,8 @@ testing:
   # coverage_threshold: 90
 
 quality:
-  lint_command: black --check . && flake8 .
-  format_command: black .
+  lint_command: python -m black --check . && python -m flake8 .
+  format_command: python -m black .
 
 roles:
   # Qué IA cumple cada rol en este proyecto. Sin esto se deduce de qué
