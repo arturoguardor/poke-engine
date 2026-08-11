@@ -11,40 +11,31 @@
 # Se commitea: describe el proyecto, no tu máquina.
 
 project:
-  # name: mi-api
-  # stack: django          # django | fastapi | flask | node | go | ...
-  name:
-  stack:
+  name: poke-engine
+  stack: django          # django | fastapi | flask | node | go | ...
 
 testing:
   # El comando que ejecuta la suite. Lo usan execute-step (para verificar cada
   # paso) y archive-plan.py (para no archivar sobre tests en rojo).
-  # command: pytest -q
-  command:
+  command: pytest -q
 
   # Dónde viven los tests. Evita que la IA cree tests/ cuando el proyecto usa
   # tests.py dentro de cada app, o al revés.
-  # path: tests/
-  path:
+  path: tests/
 
   # Solo informativo: el umbral real vive en .coveragerc o pyproject.toml, que
   # es lo que ejecuta la herramienta. Aquí sirve para que la IA sepa a qué
   # aspirar sin tener que leer ese fichero.
   # coverage_threshold: 90
-  coverage_threshold:
 
 quality:
-  # lint_command: ruff check .
-  # format_command: ruff format .
-  lint_command:
-  format_command:
+  lint_command: black --check . && flake8 .
+  format_command: black .
 
 roles:
   # Qué IA cumple cada rol en este proyecto. Sin esto se deduce de qué
   # plantillas están instaladas (CLAUDE.md → builder, CLINE.md → reviewer),
   # que funciona pero no permite decir "Cursor es mi Builder".
-  # builder: claude-code
-  # reviewer: cline
   builder: cline
   reviewer: claude-code
 

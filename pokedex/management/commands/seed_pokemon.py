@@ -50,9 +50,7 @@ class Command(BaseCommand):
                         self.style.WARNING(f"[--] {pokemon.name} ya existia")
                     )
             except Exception as e:
-                self.stdout.write(
-                    self.style.ERROR(f"[ERROR] ID {pokemon_id}: {e}")
-                )
+                self.stdout.write(self.style.ERROR(f"[ERROR] ID {pokemon_id}: {e}"))
 
         self.stdout.write(
             self.style.SUCCESS(
