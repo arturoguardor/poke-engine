@@ -1,3 +1,9 @@
+<!-- devtools:index:start — NO EDITAR: se regenera automáticamente -->
+# Índice de planes activos
+
+(ningún plan activo)
+<!-- devtools:index:end -->
+
 # Índice de planes activos
 
 | Ticket    | Título                                                     | Estado                                                   |
